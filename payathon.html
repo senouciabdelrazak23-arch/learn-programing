@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كورسات بايثون</title>
+  <style>
+    /* خلفية الموقع */
+    body {
+      background-image: url('6ee5616b-3cf7-42aa-ba62-aa8b0a3f7768.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    /* الهيدر */
+    header {
+      background-color: rgba(44, 62, 80, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    /* حاوية البطاقات */
+    .courses-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    /* تصميم كل بطاقة كورس */
+    .card {
+      background-color: rgba(4, 30, 61, 0.8);
+      border-radius: 15px;
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    /* صورة الكورس */
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 10px;
+    }
+
+    /* اسم الكورس */
+    .card h2 {
+      margin: 10px 0;
+      font-size: 22px;
+    }
+
+    /* وصف الكورس */
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    /* زر بدء الكورس */
+    .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #e68900;
+    }
+
+    /* استجابة للشاشات الصغيرة */
+    @media screen and (max-width: 980px) {
+      .card { width: 45%; }
+    }
+
+    @media screen and (max-width: 600px) {
+      .card { width: 90%; }
+    }
+    #course{
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    @media screen and (max-width: 480px) {
+  .card { width: 95%; padding: 15px; }
+  header { font-size: 24px; padding: 15px 0; }
+}
+
+  </style>
+</head>
+<body>
+
+<header>كورسات بايثون</header>
+
+<div class="courses-container">
+  
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/410Z2CHLy2L.jpg" alt="Python Basics">
+    <h2>Python للمبتدئين</h2>
+    <p>تعلم أساسيات لغة بايثون خطوة بخطوة مع أمثلة عملية لتطبيقات بسيطة.</p>
+    <a href="">ابدأ الآن</a>
+    <p>⭐️⭐️⭐️⭐️☆</p>
+
+  </div>
+ 
+</div>
+
+ 
+</div>
+</body>
+</html>
+ 
