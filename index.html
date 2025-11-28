@@ -5,172 +5,163 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>أذكار المسلم</title>
 <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        background: linear-gradient(135deg, #a8e6a3, #4caf50);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #a8e6a3, #4caf50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    h1 {
-        color: #fff;
-        font-size: 36px;
-        margin-bottom: 30px;
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    }
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
 
-    input[type="radio"] {
-        display: none;
-    }
+/* البحث */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
 
+.search-container input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #4caf50;
+    font-size: 16px;
+    width: 250px;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #2e7d32;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-container button:hover {
+    background: #1b5e20;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 5px;
+}
+
+.tabs label {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #2e7d32, #81c784);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tabs label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.content {
+    display: none;
+    background: rgba(255,255,255,0.95);
+    width: 95%;
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: right;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+input[type="radio"]:checked + label + .content {
+    display: block;
+}
+
+.azkar-item {
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.counter input {
+    width: 50px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #4caf50;
+    font-size: 14px;
+    padding: 2px;
+}
+
+.counter button {
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: none;
+    background-color: #2e7d32;
+    color: white;
+    cursor: pointer;
+}
+
+.counter button:hover {
+    background-color: #1b5e20;
+}
+
+.highlight {
+    background-color: #fff176 !important;
+}
+
+@media(max-width: 600px) {
     .tabs label {
-        padding: 12px 25px;
-        font-size: 18px;
-        border-radius: 25px;
-        cursor: pointer;
-        margin: 5px;
-        color: white;
-        background: linear-gradient(135deg, #2e7d32, #81c784);
-        transition: transform 0.3s, box-shadow 0.3s;
-        display: inline-block;
-        font-weight: bold;
+        font-size: 12px;
+        padding: 8px 10px;
     }
-
-    .tabs label:hover {
-        transform: scale(1.1);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .content {
-        display: none;
-        background: rgba(255,255,255,0.95);
-        padding: 25px;
-        border-radius: 20px;
-        max-width: 800px;
-        width: 95%;
-        margin-top: 20px;
-        text-align: right;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        animation: fadeIn 0.5s ease-in-out;
-    }
-
-    input[type="radio"]:checked + label + .content {
-        display: block;
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-
     .azkar-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 20px;
-        margin-bottom: 15px;
-        padding: 12px 15px;
-        border-radius: 15px;
-        background-color: #e8f5e9;
-        transition: transform 0.2s;
+        font-size: 14px;
     }
-
-    .azkar-item:hover {
-        transform: scale(1.02);
-        background-color: #c8e6c9;
-    }
-
-    .counter {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .counter input {
-        width: 50px;
-        text-align: center;
-        font-size: 16px;
-        padding: 4px;
-        border-radius: 6px;
-        border: 1px solid #4caf50;
-    }
-
-    .counter button {
-        padding: 4px 10px;
-        font-size: 16px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        color: #fff;
-        background-color: #2e7d32;
-        transition: background 0.2s;
-    }
-
-    .counter button:hover {
-        background-color: #1b5e20;
-    }
-
-    @media(max-width: 600px) {
-        .tabs label {
-            font-size: 16px;
-            padding: 10px 18px;
-        }
-        .azkar-item {
-            font-size: 18px;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .counter {
-            margin-top: 8px;
-        }
-        h1 {
-            font-size: 28px;
-        }
-    }
+}
 </style>
 </head>
 <body>
 
-<h1>أذكار المسلم اليومية</h1>
+<h1>أذكار المسلم</h1>
+
+<div class="search-container">
+    <input type="text" id="search" placeholder="ابحث عن ذكر">
+    <button onclick="searchAzkar()">بحث</button>
+</div>
 
 <div class="tabs">
-
-    <!-- أذكار الصباح -->
-    <input type="radio" id="morning" name="tabs" checked>
-    <label for="morning">أذكار الصباح</label>
+    <!-- مثال 5 أزرار -->
+    <input type="radio" id="zekr1" name="tabgroup" checked>
+    <label for="zekr1">ذكر 1</label>
     <div class="content">
-        <div class="azkar-item">
-            <span>اللّهـمّ بك أصبحنا وبك أمسينا وبك نحيا وبك نموت</span>
-            <div class="counter">
-                <button onclick="this.nextElementSibling.stepDown()">-</button>
-                <input type="number" value="1" min="1">
-                <button onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-        </div>
-        <div class="azkar-item">
-            <span>أصبحنا على فطرة الإسلام وكلمة الإخلاص</span>
-            <div class="counter">
-                <button onclick="this.nextElementSibling.stepDown()">-</button>
-                <input type="number" value="1" min="1">
-                <button onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-        </div>
-        <div class="azkar-item">
-            <span>أصبحنا على شكر نعمتك وحسن عبادتك</span>
-            <div class="counter">
-                <button onclick="this.nextElementSibling.stepDown()">-</button>
-                <input type="number" value="1" min="1">
-                <button onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-        </div>
-        <div class="azkar-item">
-            <span>رضيت بالله رباً وبالإسلام ديناً وبمحمد ﷺ نبياً</span>
+        <div class="azkar-item">اللّهـمّ بك أصبحنا وبك أمسينا وبك نحيا وبك نموت
             <div class="counter">
                 <button onclick="this.nextElementSibling.stepDown()">-</button>
                 <input type="number" value="1" min="1">
@@ -179,28 +170,10 @@
         </div>
     </div>
 
-    <!-- أذكار المساء -->
-    <input type="radio" id="evening" name="tabs">
-    <label for="evening">أذكار المساء</label>
+    <input type="radio" id="zekr2" name="tabgroup">
+    <label for="zekr2">ذكر 2</label>
     <div class="content">
-        <div class="azkar-item">
-            <span>اللّهـمّ بك أمسينا وبك أصبحنا وبك نحيا وبك نموت</span>
-            <div class="counter">
-                <button onclick="this.nextElementSibling.stepDown()">-</button>
-                <input type="number" value="1" min="1">
-                <button onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-        </div>
-        <div class="azkar-item">
-            <span>أمسينا على فطرة الإسلام وكلمة الإخلاص</span>
-            <div class="counter">
-                <button onclick="this.nextElementSibling.stepDown()">-</button>
-                <input type="number" value="1" min="1">
-                <button onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-        </div>
-        <div class="azkar-item">
-            <span>اللهم احفظني وأسرتي وأهلي وأحبابي</span>
+        <div class="azkar-item">أصبحنا على فطرة الإسلام وكلمة الإخلاص
             <div class="counter">
                 <button onclick="this.nextElementSibling.stepDown()">-</button>
                 <input type="number" value="1" min="1">
@@ -209,28 +182,10 @@
         </div>
     </div>
 
-    <!-- أذكار الصلاة -->
-    <input type="radio" id="prayer" name="tabs">
-    <label for="prayer">أذكار الصلاة</label>
+    <input type="radio" id="zekr3" name="tabgroup">
+    <label for="zekr3">ذكر 3</label>
     <div class="content">
-        <div class="azkar-item">
-            <span>سبحان الله وبحمده سبحان الله العظيم</span>
-            <div class="counter">
-                <button onclick="this.nextElementSibling.stepDown()">-</button>
-                <input type="number" value="1" min="1">
-                <button onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-        </div>
-        <div class="azkar-item">
-            <span>أستغفر الله الذي لا إله إلا هو الحي القيوم وأتوب إليه</span>
-            <div class="counter">
-                <button onclick="this.nextElementSibling.stepDown()">-</button>
-                <input type="number" value="1" min="1">
-                <button onclick="this.previousElementSibling.stepUp()">+</button>
-            </div>
-        </div>
-        <div class="azkar-item">
-            <span>اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم</span>
+        <div class="azkar-item">أصبحنا على شكر نعمتك وحسن عبادتك
             <div class="counter">
                 <button onclick="this.nextElementSibling.stepDown()">-</button>
                 <input type="number" value="1" min="1">
@@ -238,8 +193,21 @@
             </div>
         </div>
     </div>
-
 </div>
+
+<script>
+function searchAzkar() {
+    // ملاحظة: البحث الفعلي يحتاج JS، هنا مثال بسيط لتسليط الضوء
+    const query = document.getElementById('search').value.trim();
+    const items = document.querySelectorAll('.azkar-item');
+    items.forEach(item => {
+        item.classList.remove('highlight');
+        if(query !== "" && item.textContent.includes(query)) {
+            item.classList.add('highlight');
+        }
+    });
+}
+</script>
 
 </body>
 </html>
