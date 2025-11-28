@@ -5,13 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>أذكار المسلم</title>
 <style>
-    /* الخلفية المتموجة */
     body {
         font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
         min-height: 100vh;
-        background: linear-gradient(120deg, #a8e6a3, #4caf50);
+        background: linear-gradient(135deg, #a8e6a3, #4caf50);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,7 +25,7 @@
         text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     }
 
-    /* إخفاء الـradio buttons */
+    /* إخفاء radio */
     input[type="radio"] {
         display: none;
     }
@@ -69,13 +68,20 @@
         display: block;
     }
 
-    /* تصميم الأذكار */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    /* بطاقة لكل ذكر */
     .azkar-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-size: 20px;
         margin-bottom: 15px;
-        line-height: 1.6;
-        padding: 8px 12px;
-        border-radius: 10px;
+        padding: 12px 15px;
+        border-radius: 15px;
         background-color: #e8f5e9;
         transition: transform 0.2s;
     }
@@ -85,12 +91,37 @@
         background-color: #c8e6c9;
     }
 
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
+    /* تصميم العداد */
+    .counter {
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
-    /* الاستجابة */
+    .counter input {
+        width: 50px;
+        text-align: center;
+        font-size: 16px;
+        padding: 4px;
+        border-radius: 6px;
+        border: 1px solid #4caf50;
+    }
+
+    .counter button {
+        padding: 4px 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #fff;
+        background-color: #2e7d32;
+        transition: background 0.2s;
+    }
+
+    .counter button:hover {
+        background-color: #1b5e20;
+    }
+
     @media(max-width: 600px) {
         .tabs label {
             font-size: 16px;
@@ -98,6 +129,11 @@
         }
         .azkar-item {
             font-size: 18px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .counter {
+            margin-top: 8px;
         }
         h1 {
             font-size: 28px;
@@ -115,70 +151,144 @@
     <input type="radio" id="morning" name="tabs" checked>
     <label for="morning">أذكار الصباح</label>
     <div class="content">
-        <div class="azkar-item">اللّهـمّ بك أصبحنا وبك أمسينا وبك نحيا وبك نموت</div>
-        <div class="azkar-item">أصبحنا على فطرة الإسلام وكلمة الإخلاص</div>
-        <div class="azkar-item">أصبحنا على شكر نعمتك وحسن عبادتك</div>
-        <div class="azkar-item">رضيت بالله رباً وبالإسلام ديناً وبمحمد ﷺ نبياً</div>
-        <div class="azkar-item">اللهم اجعل يومي مباركاً وعملي مقبولاً</div>
-        <div class="azkar-item">اللهم اهدني في الصباح وبارك لي في رزقي</div>
-        <div class="azkar-item">أصبحنا وأصبح الملك لله والحمد لله ولا إله إلا الله والله أكبر</div>
+        <div class="azkar-item">
+            <span>اللّهـمّ بك أصبحنا وبك أمسينا وبك نحيا وبك نموت</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>أصبحنا على فطرة الإسلام وكلمة الإخلاص</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>أصبحنا على شكر نعمتك وحسن عبادتك</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>رضيت بالله رباً وبالإسلام ديناً وبمحمد ﷺ نبياً</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>اللهم اجعل يومي مباركاً وعملي مقبولاً</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
     </div>
 
     <!-- أذكار المساء -->
     <input type="radio" id="evening" name="tabs">
     <label for="evening">أذكار المساء</label>
     <div class="content">
-        <div class="azkar-item">اللّهـمّ بك أمسينا وبك أصبحنا وبك نحيا وبك نموت</div>
-        <div class="azkar-item">أمسينا على فطرة الإسلام وكلمة الإخلاص</div>
-        <div class="azkar-item">أمسينا على شكر نعمتك وحسن عبادتك</div>
-        <div class="azkar-item">اللهم إني أمسيت أشهدك وأشهد حملة عرشك وملائكتك وجميع خلقك</div>
-        <div class="azkar-item">أمسينا وأمس الملك لله والحمد لله ولا إله إلا الله والله أكبر</div>
-        <div class="azkar-item">اللهم احفظني وأسرتي وأهلي وأحبابي</div>
-        <div class="azkar-item">اللهم اجعل مساءنا كله طاعة ورضى عندك</div>
+        <div class="azkar-item">
+            <span>اللّهـمّ بك أمسينا وبك أصبحنا وبك نحيا وبك نموت</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>أمسينا على فطرة الإسلام وكلمة الإخلاص</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>اللهم احفظني وأسرتي وأهلي وأحبابي</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>اللهم اجعل مساءنا كله طاعة ورضى عندك</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
     </div>
 
     <!-- أذكار الصلاة -->
     <input type="radio" id="prayer" name="tabs">
     <label for="prayer">أذكار الصلاة</label>
     <div class="content">
-        <div class="azkar-item">سبحان الله وبحمده سبحان الله العظيم</div>
-        <div class="azkar-item">أستغفر الله الذي لا إله إلا هو الحي القيوم وأتوب إليه</div>
-        <div class="azkar-item">اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم</div>
-        <div class="azkar-item">اللهم اجعل صلاتي قرة عين لي ونور قلبي</div>
-        <div class="azkar-item">اللهم تقبل صلاتي واغفر لي ذنوبي</div>
-        <div class="azkar-item">سبحان ربي الأعلى</div>
-    </div>
-
-    <!-- أذكار الاستغفار -->
-    <input type="radio" id="istighfar" name="tabs">
-    <label for="istighfar">أذكار الاستغفار</label>
-    <div class="content">
-        <div class="azkar-item">أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه</div>
-        <div class="azkar-item">سبحان الله وبحمده عدد خلقه ورضا نفسه وزنة عرشه ومداد كلماته</div>
-        <div class="azkar-item">رب اغفر لي وتب علي إنك أنت التواب الغفور</div>
-        <div class="azkar-item">أستغفر الله وأتوب إليه من كل ذنب</div>
+        <div class="azkar-item">
+            <span>سبحان الله وبحمده سبحان الله العظيم</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>أستغفر الله الذي لا إله إلا هو الحي القيوم وأتوب إليه</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
     </div>
 
     <!-- أذكار النوم -->
     <input type="radio" id="sleep" name="tabs">
     <label for="sleep">أذكار النوم</label>
     <div class="content">
-        <div class="azkar-item">باسمك اللهم أموت وأحيا</div>
-        <div class="azkar-item">اللهم قني عذابك يوم تبعث عبادك</div>
-        <div class="azkar-item">اللهم أغفر لي ذنبي كله</div>
-        <div class="azkar-item">اللهم أسلمت وجهي إليك</div>
-        <div class="azkar-item">اللهم اجعل نومي هادئاً ومريحاً</div>
-        <div class="azkar-item">اللهم احفظني من كل شر في الليل والنهار</div>
-    </div>
-
-    <!-- أذكار الطعام -->
-    <input type="radio" id="food" name="tabs">
-    <label for="food">أذكار الطعام</label>
-    <div class="content">
-        <div class="azkar-item">بسم الله وعلى بركة الله</div>
-        <div class="azkar-item">اللهم بارك لنا فيما رزقتنا وقنا عذاب النار</div>
-        <div class="azkar-item">الحمد لله الذي أطعمنا وسقانا وجعلنا مسلمين</div>
-        <div class="azkar-item">اللهم اجعل طعامنا هذا شفاء وبركة لنا</div>
+        <div class="azkar-item">
+            <span>باسمك اللهم أموت وأحيا</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>اللهم قني عذابك يوم تبعث عبادك</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
+        <div class="azkar-item">
+            <span>اللهم اغفر لي ذنوبي جميعاً</span>
+            <div class="counter">
+                <button onclick="this.nextElementSibling.stepDown()">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+        </div>
     </div>
 
 </div>
