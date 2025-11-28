@@ -1,0 +1,115 @@
+<!---->
+<!DOCTYPE html>
+<html lang="ar"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>موقع تعليم البرمجة</title> 
+  <style> 
+    body {
+      background-image: url('6ee5616b-3cf7-42aa-ba62-aa8b0a3f7768.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(44, 62, 80, 0.8);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    section {
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      background-color: rgba(4, 30, 61, 0.7);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    #html { background-color: rgba(38, 82, 133, 0.7); }
+    #css  { background-color: rgba(72, 115, 159, 0.7); }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 24px;
+    }
+
+    .icon_py {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 20px 0;
+      background-color: rgba(255,255,255,0.1);
+      padding: 10px;
+    }
+
+    label {
+      display: block;
+      padding: 10px;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    /* استجابة للشاشات الصغيرة */
+    @media screen and (max-width: 980px) {
+      section {
+        width: 45%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      section {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <header>
+    <h1>موقع لتعليم البرمجة بأبسط الطرق</h1>
+  </header>
+
+  <div class="container"> 
+    <section id="paython"> 
+      <h1>Python</h1> 
+      <a href="payathon.html"><img class="icon_py" src="https://m.media-amazon.com/images/I/410Z2CHLy2L.jpg" alt="Python"></a> 
+      <label>ابدأ وتمتع بالبرمجة من خلال لغة البايثون التي تعلمها سهل وفوائدها كبيرة</label>
+    </section> 
+
+    <section id="html"> 
+      <h1>HTML</h1> 
+      <a href=""><img class="icon_py" src="https://static.vecteezy.com/system/resources/thumbnails/001/416/705/small/html5-emblem-orange-shield-and-white-text-vector.jpg" alt="HTML"></a> 
+      <label>ابدأ وتمتع بالبرمجة من خلال لغة HTML وفوائدها كبيرة</label> 
+    </section> 
+
+    <section id="css"> 
+      <h1>CSS</h1> 
+      <a href=""><img class="icon_py" src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo-2011.png" alt="CSS"></a> 
+      <label>ابدأ وتمتع بالبرمجة من خلال لغة CSS وفوائدها كبيرة</label> 
+    </section> 
+    <h1>hello senouci</h1>
+  </div> 
+</body> 
+</html>
+  
