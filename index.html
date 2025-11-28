@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
@@ -24,20 +24,9 @@ h1 {
   gap: 10px;
   justify-content: center;
 }
-.details-button {
-  width: 200px;
-  background: linear-gradient(135deg, #2e7d32, #81c784);
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border: none;
-  text-align: center;
-}
 details {
-  width: 220px;
-  background: rgba(255,255,255,0.9);
+  width: 250px;
+  background: rgba(255,255,255,0.95);
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -45,6 +34,9 @@ summary {
   padding: 10px;
   cursor: pointer;
   font-weight: bold;
+  background: linear-gradient(135deg, #2e7d32, #81c784);
+  color: #fff;
+  border-radius: 10px;
 }
 .details-content {
   padding: 10px;
@@ -72,117 +64,146 @@ summary {
 </style>
 </head>
 <body>
-<h1>أذكار المسلم</h1>
+<h1>أذكار المسلم اليومية</h1>
 <div class="container">
 
-<!-- مثال زر واحد -->
+<!-- مثال لكل زر، كرره مع تغيير العنوان والمحتوى -->
+
+<!-- زر 1: أذكار الصباح -->
 <details>
   <summary>أذكار الصباح</summary>
   <div class="details-content">
     <div class="azkar-item">اللهم بك أصبحنا وبك أمسينا
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">رضيت بالله رباً وبالإسلام ديناً وبمحمد ﷺ نبياً
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">أصبحنا على فطرة الإسلام وكلمة الإخلاص
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم قني عذابك يوم تبعث عبادك
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">سبحان الله وبحمده
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">لا إله إلا الله وحده لا شريك له
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">حسبنا الله ونعم الوكيل
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم صل وسلم على نبينا محمد
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">أستغفر الله العظيم
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">سبحان ربي الأعلى
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">الحمد لله رب العالمين
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">لا حول ولا قوة إلا بالله
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم اهدنا فيمن هديت
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم اغفر لي ذنوبي
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم ثبت قلبي على دينك
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم اجعل يومي مباركاً
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم اجعلني من الشاكرين
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">آمنت بالله فتوكلت عليه
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم اجعل قلبي عامر بذكرك
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
     <div class="azkar-item">اللهم اجعل ختام يومي حسناً
-      <div class="counter">
-        <input type="number" value="1" min="1">
-      </div>
+      <div class="counter"><input type="number" value="1" min="1"></div>
     </div>
   </div>
 </details>
 
-<!-- يمكن تكرار هذا الزر مع تغيير العنوان والمحتوى حتى يصبح لدينا 20 زر -->
+<!-- زر 2: أذكار المساء -->
+<details>
+  <summary>أذكار المساء</summary>
+  <div class="details-content">
+    <div class="azkar-item">أمسينا وأمسى الملك لله والحمد لله
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم بك أمسينا وبك أصبحنا وبك نحيا وبك نموت
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">أمسينا على فطرة الإسلام وكلمة الإخلاص
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم قني عذابك يوم تبعث عبادك
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">سبحان الله وبحمده
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">لا إله إلا الله وحده لا شريك له
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">حسبنا الله ونعم الوكيل
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم صل وسلم على نبينا محمد
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">أستغفر الله العظيم
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">سبحان ربي الأعلى
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">الحمد لله رب العالمين
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">لا حول ولا قوة إلا بالله
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم اغفر لي ذنوبي
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم اجعل مساءي مباركًا
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">آمنت بالله فتوكلت عليه
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم اجعل قلبي عامر بذكرك
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم اجعل ختام يومي حسناً
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم اجعل لي نوراً في قلبي
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم ارحمني برحمتك
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+    <div class="azkar-item">اللهم ثبّت قلبي على دينك
+      <div class="counter"><input type="number" value="1" min="1"></div>
+    </div>
+  </div>
+</details>
+
+<!-- يمكن تكرار نفس البنية لـ 18 زر آخر مع تغيير عنوان الزر والأذكار -->
 
 </div>
 </body>
